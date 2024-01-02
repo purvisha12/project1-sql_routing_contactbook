@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .input_btn{
+            background-color: powderblue;
+            margin: 5px;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+
+        }
+        form{
+            width: 280px;
+            margin: 0px 460px;
+            padding: 30px;        
+            text-align: center;
+            border: 1px solid gray;
+            font-weight: 700;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <form method="post" action="/addcontact"  style="text-align: center;">
+    
+            Name: <input type="text" name="name" id="" > <br><br>
+            contact_no: <input type="text" name="contact" id="" > <br><br>
+            <input type="submit" name="submit" value="add" class="input_btn">
+        </form> <br>
+
+
+        <table border style="margin: auto; width: 20%; text-align: center; margin-top: 30px;">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>contact</th>
+                <th>delete</th>
+                <th>edit</th>
+            </tr>
+
+            <% result.forEach(function(user){ %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.contact %></td>
+                <td><a href="/delete/<%= user.id%>">delete</a></td>
+                <td><a href="/up/<%= user.id%>">edit</a></td>
+            </tr>
+            <% })%>
+        </table>
+    </body>
+</html>

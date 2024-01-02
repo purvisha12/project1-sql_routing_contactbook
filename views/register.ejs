@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login page</title>
+        <style>
+            .input_btn{
+            background-color: powderblue;
+            margin: 5px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+
+        }
+        form{
+            width: 280px;
+            margin: 200px 500px;
+            padding: 30px;        
+            text-align: center;
+            border: 1px solid gray;
+            font-weight: 700;
+        }
+        </style>
+    </head>
+    <body>
+
+        <form action="/regis" method="post">
+
+            Email Id: <input type="email" name="email"><br><br>
+            password: <input type="password" name="password"><br><br>
+            <input type="submit" value="registration" name="submit" class="input_btn">
+        </form>
+    </body>
+</html>
